@@ -1,0 +1,9 @@
+
+License Notes for lower limb meshes
+
+1) The pelvic mesh has been developed by the Authors of the MRI2PSM toolbox and distributed under the zlib license. See LICENSE for license. These meshes have been created from the MRI scans coming from the Visible Human Project (https://www.nlm.nih.gov/research/visible/visible_human.html). This pelvic mesh has also available independently on the Simtk website:
+
+2) The meshes of the left and right femur, tibia, and fibula are taken from the study by Arnold et al. 2010, "A Model of the Lower Limb for Analysis of Human Movement", Annals of Biomedical Engineering, 38(2) 269-279. The meshes are freely available at https://simtk.org/home/lowlimbmodel09. Here, we have only modified their format from VTK to matlab data files.
+
+3) The foot meshes have been modified from the original foot meshes provided by Arnold et al. 2010. Here, we have condensed all the foot bones together and computed the alpha shape that approximates the outer surface of the foot bones.
+

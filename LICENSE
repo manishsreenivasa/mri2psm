@@ -1,0 +1,30 @@
+MRI2PSM v0.1 - Patient-specific rigid body modeling from MRI images
+Copyright (c) 2016 Manish Sreenivasa <manish.sreenivasa@iwr.uni-heidelberg.de>, Daniel Gonzalez Alvarado, Carlos Javier Gonzalez Chamorro, Heidelberg University, Germany
+
+Licensed under the zlib license.
+
+------------
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+   1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+
+   2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+
+   3. This notice may not be removed or altered from any source
+   distribution.
+------------
+
+Note that the following functions have been derived from other works which carry their own licenses:
+programs/1_pc2mesh/fnc_alphaShape : Distributed under the BSD license
+programs/1_pc2mesh/fnc_opt_regpt2surf : Modified from "metch" toolbox, and distributed under the GNU GPLv2 license
+

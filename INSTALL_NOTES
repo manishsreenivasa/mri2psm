@@ -1,0 +1,49 @@
+MRI2PSM v0.1 - Patient-specific rigid body modeling from MRI images
+Copyright (c) 2016 Manish Sreenivasa <manish.sreenivasa@iwr.uni-heidelberg.de>, Daniel Gonzalez Alvarado, Carlos Javier Gonzalez Chamorro, Heidelberg University, Germany
+
+Licensed under the zlib license.
+
+
+READ THIS FIRST: The toolchain MRI2PSM works with several external libraries / code. Some of these dependencies are included in the folder “externalDependencies”, other would have to installed manually (e.g. RBDL, Ilastik). A sample data set including MRI images, raw gait data and processed data is included in the package. Further install instructions are given below.
+
+If you are impatient and just want to see how everything works, play the videos “mri2psm_video1_SemiAutomaticSegmentation.mp4” and “mri2psm_video2_AutomaticPSM.mp4”  included in the parent folder.
+
+Happy modeling!
+
+
+—————————————— INSTALLING DEPENDENCIES ——————————————
+
+1) ILASTIK : http://ilastik.org
+Software used to segment MRI images. MRI2PSM v0.1 toolchain has been tested with Ilastik version 1.1.5.
+
+2) MATLAB : www.mathworks.com
+You need MATLAB, and the optimization and image processing toolboxes. MRI2PSM v0.1 toolchain has been tested with MATLAB versions 2013a and 2015a. Additional MATLAB based dependencies (user functions) are included in the “externalDependencies” folder. Your MATLAB installation should have this folder and its subfolders added to its path.
+
+3) PUPPETEER : https://github.com/martinfelis/puppeteer
+Software used to compute inverse kinematics (marker fitting).
+
+4) RBDL : http://rbdl.bitbucket.org
+Software used to compute inverse dynamics. MRI2PSM v0.1 toolchain has been tested with RBDL 2.4.0. You may also need Boost, Eigen3 etc to work some of the inverse dynamics code. 
+
+5) BTKCORE : https://github.com/Biomechanical-ToolKit/BTKCore
+Software used to read C3D files. MRI2PSM v0.1 toolchain has been tested with BTK 0.4dev. Install with matlab wrappers enabled for matlab plotting code to work.
+
+
+
+—————————————— RUNNING STUFF ——————————————
+
+If you have installed everything properly, then run the master programs in the following order to see the results based on the included sample data:
+
+In MATLAB:  master1_createPSM.m 
+In a shell: master2_computeID.sh
+In MATLAB:  master3_plotIDResults.m
+
+Notes on Semi-Automatic Segmentation:
+
+1) To create your own segmentation, you need to convert your DICOM files into images, load into Ilastik and provide some training data to classify bone/fat, muscle, hardbone and background.
+
+2) After classifying all the images, load the results (h5 files) using the program programs/0_mri2pc/prog_0_chooseBoneBoundaries.m, and manually select the bone boundaries.
+
+3) After selection of bone boundaries start the program prog_1_assignBoneBoundaryToBone.m and select the mapping between bone boundaries and the corresponding bone.
+
+Please have a look at the included videos to get a better idea about Steps 1->3 above.
